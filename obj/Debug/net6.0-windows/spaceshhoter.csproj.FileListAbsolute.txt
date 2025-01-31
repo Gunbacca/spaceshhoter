@@ -36,3 +36,4 @@ C:\Users\Admin\Documents\GitHub\spaceshhoter\obj\Debug\net6.0-windows\refint\spa
 C:\Users\Admin\Documents\GitHub\spaceshhoter\obj\Debug\net6.0-windows\spaceshhoter.pdb
 C:\Users\Admin\Documents\GitHub\spaceshhoter\obj\Debug\net6.0-windows\spaceshhoter.genruntimeconfig.cache
 C:\Users\Admin\Documents\GitHub\spaceshhoter\obj\Debug\net6.0-windows\ref\spaceshhoter.dll
+C:\Users\Admin\Documents\GitHub\spaceshhoter\obj\Debug\net6.0-windows\spaceshhoter.sourcelink.json
