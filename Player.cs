@@ -11,7 +11,8 @@ namespace spaceshhoter
         private Texture2D texture;
         private Vector2 position;
         private Rectangle hitbox;
-        private KeyboardState kState;
+        private KeyboardState newkState;
+        private KeyboardState oldkState;
         private List<bullet> bullets = new List<bullet>();
 
         public List<bullet> Bullets{
@@ -26,9 +27,10 @@ namespace spaceshhoter
 
         }
     public void Update(){
-        kState = Keyboard.GetState();
+        newkState = Keyboard.GetState();
        Move();
        Shoot();
+       oldkState = newkState;
 
        foreach(bullet b in bullets){
         b.Update();
@@ -38,7 +40,7 @@ namespace spaceshhoter
 
     private void Shoot(){
         
-        if(kState.IsKeyDown(Keys.Space)){
+        if(newkState.IsKeyDown(Keys.Space) && oldkState.IsKeyUp(Keys.Space)){
             bullet bullet = new bullet(texture,position);
             bullets.Add(bullet);
         }
@@ -46,10 +48,10 @@ namespace spaceshhoter
     private void Move(){
     
 
-        if(kState.IsKeyDown(Keys.A)){
+        if(newkState.IsKeyDown(Keys.A)){
             position.X -= 1;
         }
-        else if(kState.IsKeyDown(Keys.D)){
+        else if(newkState.IsKeyDown(Keys.D)){
             position.X +=1;
         }
         hitbox.Location = position.ToPoint();
