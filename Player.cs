@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using SharpDX.MediaFoundation;
 
 namespace spaceshhoter
 {
@@ -9,6 +10,7 @@ namespace spaceshhoter
         private Texture2D texture;
         private Vector2 position;
         private Rectangle hitbox;
+        private KeyboardState kState;
 
         public Player(Texture2D texture, Vector2 position, int pixelSize){
             this.texture = texture;
@@ -18,11 +20,20 @@ namespace spaceshhoter
 
         }
     public void Update(){
+        kState = Keyboard.GetState();
        Move();
+       shoot();
     }
 
+
+    private void shoot(){
+        
+        if(kState.IsKeyDown(Keys.Space)){
+            bullet bullet = new bullet();
+        }
+    }
     private void Move(){
-         KeyboardState kState =Keyboard.GetState();
+    
 
         if(kState.IsKeyDown(Keys.A)){
             position.X -= 1;
