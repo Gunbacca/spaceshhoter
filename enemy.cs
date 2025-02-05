@@ -13,6 +13,10 @@ namespace spaceshhoter
         private Microsoft.Xna.Framework.Rectangle hitbox;
         private float speed; 
 
+        public Microsoft.Xna.Framework.Rectangle Hitbox{
+            get{return hitbox;}
+        }
+
         public enemy(Texture2D texture){
             this.texture = texture;
             Random rand = new Random(); 

@@ -49,7 +49,10 @@ public class Game1 : Game
         foreach(enemy enemy in enemies){
             enemy.update();
         }
-        spawnenemies();
+        EnemyBulletCollision();
+        spawnenemy();
+
+        
         base.Update(gameTime);
     }
 
@@ -67,11 +70,23 @@ public class Game1 : Game
 
         base.Draw(gameTime);
     }
-    private void spawnenemies(){
+    private void spawnenemy(){
         Random rand = new Random();
         int value = rand.Next(1,101);
         int spawnChancePercent = 5;
         if(value<=spawnChancePercent)
         enemies.Add(new enemy(spaceShip));
+    }
+    private void EnemyBulletCollision(){
+        for(int i =0; i< enemies.Count;i++){
+            for(int j=0;j<player.Bullets.Count;j++){
+                if(enemies[i].Hitbox.Intersects(player.Bullets[j].Hitbox)){
+                    enemies.RemoveAt(i);
+                    player.Bullets.RemoveAt(j);
+                    i--;
+                    j--;
+                }
+            }
+        }
     }
 }
