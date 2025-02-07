@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -10,9 +11,12 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+    private Texture2D BB;
+    private Texture2D Bakgrumdsbild;
     private Player player;
     private Texture2D spaceShip;
     private List<enemy> enemies = new List<enemy>();
+    private int liv=3;
 
     public Game1()
     {
@@ -34,6 +38,8 @@ public class Game1 : Game
 
         spaceShip = Content.Load<Texture2D>("spacespp");
 
+        Bakgrumdsbild = Content.Load<Texture2D>("BB");
+
         player = new Player(spaceShip,new Vector2(380,350),50);
 
         enemies.Add(new enemy(spaceShip));
@@ -51,7 +57,7 @@ public class Game1 : Game
         }
         EnemyBulletCollision();
         spawnenemy();
-
+        playerdie();
         
         base.Update(gameTime);
     }
@@ -86,6 +92,19 @@ public class Game1 : Game
                     i--;
                     j--;
                 }
+            }
+        }
+    }
+    private void playerdie(){
+        for(int i =0; i< enemies.Count;i++){
+            if(enemies[i].Hitbox.Intersects(player.Hitbox)){
+                liv--;
+                enemies.RemoveAt(i);
+                if(liv <= 0){
+                    Exit();
+                }
+                i--;
+
             }
         }
     }

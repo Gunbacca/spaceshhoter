@@ -18,7 +18,9 @@ namespace spaceshhoter
         public List<bullet> Bullets{
             get{return bullets;}
         }
-
+        public Rectangle Hitbox{
+            get{return hitbox;}
+        }
         public Player(Texture2D texture, Vector2 position, int pixelSize){
             this.texture = texture;
             this.position = position;
@@ -49,10 +51,10 @@ namespace spaceshhoter
     
 
         if(newkState.IsKeyDown(Keys.A)){
-            position.X -= 1;
+            position.X -= 4;
         }
         else if(newkState.IsKeyDown(Keys.D)){
-            position.X +=1;
+            position.X +=4;
         }
         hitbox.Location = position.ToPoint();
     }
@@ -68,5 +70,4 @@ namespace spaceshhoter
     }
     
 }
-
 
