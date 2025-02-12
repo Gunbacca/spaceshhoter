@@ -12,7 +12,7 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     private Texture2D BB;
-    private Texture2D Bakgrumdsbild;
+    private Texture2D bakgrundsBild;
     private Player player;
     private Texture2D spaceShip;
     private List<enemy> enemies = new List<enemy>();
@@ -38,7 +38,7 @@ public class Game1 : Game
 
         spaceShip = Content.Load<Texture2D>("spacespp");
 
-        Bakgrumdsbild = Content.Load<Texture2D>("BB");
+        bakgrundsBild = Content.Load<Texture2D>("istockphoto-1401387054-612x612");
 
         player = new Player(spaceShip,new Vector2(380,350),50);
 
@@ -67,6 +67,8 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         _spriteBatch.Begin();
+        Rectangle bgRect = new(0,0, 800, 600);
+        _spriteBatch.Draw(bakgrundsBild, bgRect, Color.White);
         player.Draw(_spriteBatch);
         foreach(enemy enemy in enemies)
         enemy.Draw(_spriteBatch);

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("spaceshhoter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be823b280990a5d7b14b46cb0f2e0a5755fa08b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a9ef2e5e0329e26dd86b6c1d63993a1dbc709d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("spaceshhoter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("spaceshhoter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

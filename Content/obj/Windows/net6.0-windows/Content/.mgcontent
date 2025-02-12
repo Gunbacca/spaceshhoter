@@ -4,9 +4,11 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Admin/Documents/GitHub/spaceshhoter/Content/istockphoto-1401387054-612x612.jpg</File>
     <File>C:/Users/Admin/Documents/GitHub/spaceshhoter/Content/spacespp.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
