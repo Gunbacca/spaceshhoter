@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace spaceshhoter;
 
@@ -17,6 +19,8 @@ public class Game1 : Game
     private Texture2D spaceShip;
     private List<enemy> enemies = new List<enemy>();
     private int liv=3;
+    SoundEffect effect;
+    Song theme;
 
     public Game1()
     {
@@ -38,11 +42,15 @@ public class Game1 : Game
 
         spaceShip = Content.Load<Texture2D>("spacespp");
 
+        effect = Content.Load<SoundEffect>("shoot");
         bakgrundsBild = Content.Load<Texture2D>("istockphoto-1401387054-612x612");
 
-        player = new Player(spaceShip,new Vector2(380,350),50);
+        player = new Player(spaceShip,new Vector2(380,350),50, effect);
 
         enemies.Add(new enemy(spaceShip));
+        theme = Content.Load<Song>("back-music");
+        MediaPlayer.Play(theme);
+
     }
 
     protected override void Update(GameTime gameTime)
@@ -91,7 +99,6 @@ public class Game1 : Game
                 if(enemies[i].Hitbox.Intersects(player.Bullets[j].Hitbox)){
                     enemies.RemoveAt(i);
                     player.Bullets.RemoveAt(j);
-                    i--;
                     j--;
                 }
             }

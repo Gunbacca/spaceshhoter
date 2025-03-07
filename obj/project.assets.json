@@ -7537,11 +7537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\spaceshhoter\\spaceshhoter.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\monogame2alex\\spaceshhoter\\spaceshhoter.csproj",
       "projectName": "spaceshhoter",
-      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\spaceshhoter\\spaceshhoter.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\monogame2alex\\spaceshhoter\\spaceshhoter.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\spaceshhoter\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\monogame2alex\\spaceshhoter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

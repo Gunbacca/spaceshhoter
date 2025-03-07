@@ -4,11 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Admin/Documents/GitHub/spaceshhoter/Content/istockphoto-1401387054-612x612.jpg</File>
-    <File>C:/Users/Admin/Documents/GitHub/spaceshhoter/Content/spacespp.png</File>
+    <File>C:/Users/Admin/Documents/GitHub/monogame2alex/spaceshhoter/Content/istockphoto-1401387054-612x612.jpg</File>
+    <File>C:/Users/Admin/Documents/GitHub/monogame2alex/spaceshhoter/Content/shoot.wav</File>
+    <File>C:/Users/Admin/Documents/GitHub/monogame2alex/spaceshhoter/Content/spacespp.png</File>
+    <File>C:/Users/Admin/Documents/GitHub/monogame2alex/spaceshhoter/Content/Героическая минорная.mp3</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File>back-music.mp3</File>
   </DestFiles>
 </SourceFileCollection>
